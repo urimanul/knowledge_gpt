@@ -10,16 +10,16 @@ load_dotenv()
 def sidebar():
     with st.sidebar:
         st.markdown(
-            "## How to use\n"
-            "1. Enter your [OpenAI API key](https://platform.openai.com/account/api-keys) below🔑\n"  # noqa: E501
-            "2. Upload a pdf, docx, or txt file📄\n"
-            "3. Ask a question about the document💬\n"
+            "## 使用方法\n"
+            "1. 以下に [OpenAI API キー](https://platform.openai.com/account/api-keys) を入力します🔑\n" # noqa: E501
+            "2. PDF、docx、または txt ファイルをアップロードします📄\n"
+            "3. ドキュメントについて質問してください💬\n"
         )
         api_key_input = st.text_input(
             "OpenAI API Key",
             type="password",
-            placeholder="Paste your OpenAI API key here (sk-...)",
-            help="You can get your API key from https://platform.openai.com/account/api-keys.",  # noqa: E501
+            placeholder="ここに OpenAI API キーを貼り付けます (sk-...)",
+            help="APIキーはhttps://platform.openai.com/account/api-keys から取得できます。",  # noqa: E501
             value=os.environ.get("OPENAI_API_KEY", None)
             or st.session_state.get("OPENAI_API_KEY", ""),
         )
@@ -29,15 +29,15 @@ def sidebar():
         st.markdown("---")
         st.markdown("# About")
         st.markdown(
-            "📖KnowledgeGPT allows you to ask questions about your "
-            "documents and get accurate answers with instant citations. "
+            "📖KnowledgeGPT を使用すると、自分のことについて質問できます。 "
+            "文書を参照し、即座に引用して正確な回答を得ることができます。"
         )
         st.markdown(
-            "This tool is a work in progress. "
-            "You can contribute to the project on [GitHub](https://github.com/mmz-001/knowledge_gpt) "  # noqa: E501
-            "with your feedback and suggestions💡"
+            "このツールは開発中です。"
+            "[GitHub](https://github.com/mmz-001/knowledge_gpt) でプロジェクトに貢献できます。 "  # noqa: E501
+            "フィードバックや提案をお送りください💡"
         )
-        st.markdown("Made by [mmz_001](https://twitter.com/mm_sasmitha)")
+        st.markdown("Created by RYH")
         st.markdown("---")
 
         faq()
