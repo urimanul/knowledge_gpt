@@ -24,7 +24,6 @@ def sidebar():
             # Input User ID
             SPOID = st.text_input(
                 "SPOID",
-                type="default",
                 disabled=False,
                 placeholder="SPOIDを入力",
                 help="SPOID",  # noqa: E501
@@ -32,7 +31,6 @@ def sidebar():
 
             USER = st.text_input(
                 "USERID",
-                type="default",
                 disabled=False,
                 placeholder="USERIDを入力",
                 help="USERID",  # noqa: E501
@@ -48,7 +46,6 @@ def sidebar():
 
             HOST = st.text_input(
                 "HOST",
-                type="default",
                 disabled=False,
                 placeholder="HOSTを入力",
                 help="HOST",  # noqa: E501
@@ -56,7 +53,6 @@ def sidebar():
 
             DBNAME = st.text_input(
                 "DBNAME",
-                type="default",
                 disabled=False,
                 placeholder="DBNAMEを入力",
                 help="DBNAME",  # noqa: E501
