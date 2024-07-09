@@ -3,6 +3,7 @@ import streamlit as st
 
 
 def faq():
+    st.markdown('<span style="font-size: 24px;">FAQ</span>', unsafe_allow_html=True)
     st.markdown(
         """
 # FAQ
