@@ -62,17 +62,18 @@ def sidebar():
                 help="DBNAME",  # noqa: E501
             )
             
-            # DBへ接続
-            conn = mysql.connector.connect(
-            user=USER,
-            password=PASSKEY,
-            host=HOST,
-            database=DBNAME,
-            port=36000
-            )
 
             flgButton = st.button('認証')
             if flgButton:
+                # DBへ接続
+                conn = mysql.connector.connect(
+                    user=USER,
+                    password=PASSKEY,
+                    host=HOST,
+                    database=DBNAME,
+                    port=36000
+                )
+            
                 # DBの接続確認
                 if not conn.is_connected():
                     raise Exception("MySQLサーバへの接続に失敗しました")
