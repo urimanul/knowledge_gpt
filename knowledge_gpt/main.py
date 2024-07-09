@@ -39,22 +39,22 @@ openai_api_key = st.session_state.get("OPENAI_API_KEY")
 
 if not openai_api_key:
     st.warning(
-        "Enter your OpenAI API key in the sidebar. You can get a key at"
+        "サイドバーに OpenAI API キーを入力します。キーは次の場所で入手できます"
         " https://platform.openai.com/account/api-keys."
     )
 
 
 uploaded_file = st.file_uploader(
-    "Upload a pdf, docx, or txt file",
+    "PDF、docx、または txt ファイルをアップロードする",
     type=["pdf", "docx", "txt"],
-    help="Scanned documents are not supported yet!",
+    help="スキャンされたドキュメントはまだサポートされていません。",
 )
 
 model: str = st.selectbox("Model", options=MODEL_LIST)  # type: ignore
 
 with st.expander("Advanced Options"):
-    return_all_chunks = st.checkbox("Show all chunks retrieved from vector search")
-    show_full_doc = st.checkbox("Show parsed contents of the document")
+    return_all_chunks = st.checkbox("ベクトル検索から取得したすべてのチャンクを表示")
+    show_full_doc = st.checkbox("解析された文書の内容を表示する")
 
 
 if not uploaded_file:
@@ -75,7 +75,7 @@ if not is_open_ai_key_valid(openai_api_key, model):
     st.stop()
 
 
-with st.spinner("Indexing document... This may take a while⏳"):
+with st.spinner("ドキュメントのインデックス作成中...これには時間がかかる場合があります⏳"):
     folder_index = embed_files(
         files=[chunked_file],
         embedding=EMBEDDING if model != "debug" else "debug",
@@ -84,8 +84,8 @@ with st.spinner("Indexing document... This may take a while⏳"):
     )
 
 with st.form(key="qa_form"):
-    query = st.text_area("Ask a question about the document")
-    submit = st.form_submit_button("Submit")
+    query = st.text_area("書類について質問する")
+    submit = st.form_submit_button("サブミット")
 
 
 if show_full_doc:
