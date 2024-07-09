@@ -28,7 +28,6 @@ def sidebar():
                 disabled=False,
                 placeholder="SPOIDを入力",
                 help="SPOID",  # noqa: E501
-                ),
             )
 
             USER = st.text_input(
@@ -37,7 +36,6 @@ def sidebar():
                 disabled=False,
                 placeholder="USERIDを入力",
                 help="USERID",  # noqa: E501
-                ),
             )
 
             PASSKEY = st.text_input(
@@ -46,7 +44,6 @@ def sidebar():
                 disabled=False,
                 placeholder="PASSKEYを入力",
                 help="PASSKEY",  # noqa: E501
-                ),
             )
 
             HOST = st.text_input(
@@ -55,7 +52,6 @@ def sidebar():
                 disabled=False,
                 placeholder="HOSTを入力",
                 help="HOST",  # noqa: E501
-                ),
             )
 
             DBNAME = st.text_input(
@@ -64,7 +60,6 @@ def sidebar():
                 disabled=False,
                 placeholder="DBNAMEを入力",
                 help="DBNAME",  # noqa: E501
-                ),
             )
             
             # DBへ接続
