@@ -21,17 +21,6 @@ def sidebar():
 
         flgCheck_A = st.checkbox('キー入力')
         if flgCheck_A:
-            #st.text('Checkbox A has checked')
-            api_key_input = st.text_input(
-                "OpenAI API Key",
-                type="password",
-                disabled=False,
-                placeholder="ここに OpenAI API キーを貼り付けます (sk-...)",
-                help="APIキーはhttps://platform.openai.com/account/api-keys から取得できます。",  # noqa: E501
-                value=os.environ.get("OPENAI_API_KEY", None)
-                or st.session_state.get("OPENAI_API_KEY", ""),
-            )
-        else:
             # DBへ接続
             conn = mysql.connector.connect(
             user='smairuser',
@@ -58,6 +47,16 @@ def sidebar():
                 api_key_input = fetched_line['api_key']
 
             cur.close()
+        else:
+            api_key_input = st.text_input(
+                "OpenAI API Key",
+                type="password",
+                disabled=False,
+                placeholder="ここに OpenAI API キーを貼り付けます (sk-...)",
+                help="APIキーはhttps://platform.openai.com/account/api-keys から取得できます。",  # noqa: E501
+                value=os.environ.get("OPENAI_API_KEY", None)
+                or st.session_state.get("OPENAI_API_KEY", ""),
+            )
 
         st.session_state["OPENAI_API_KEY"] = api_key_input
 
