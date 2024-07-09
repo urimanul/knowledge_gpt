@@ -36,7 +36,7 @@ def sidebar():
             "このツールは開発中です。"
             "[GitHub](https://github.com/urimanul/knowledge_gpt/)でプロジェクトを展開しています。" 
         )
-        st.markdown("MITライセンス")
+        
         st.markdown("---")
 
         faq()
