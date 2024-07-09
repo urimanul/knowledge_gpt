@@ -9,6 +9,7 @@ load_dotenv()
 
 def sidebar():
     with st.sidebar:
+        st.markdown('<span style="font-size: 14px;">"## 使用方法\n1. 以下に [OpenAI API キー](https://platform.openai.com/account/api-keys) を入力します🔑\n # noqa: E501 2. PDF、docx、または txt ファイルをアップロードします📄\n3. ドキュメントについて質問してください💬\n</span>', unsafe_allow_html=True)
         st.markdown(
             "## 使用方法\n"
             "1. 以下に [OpenAI API キー](https://platform.openai.com/account/api-keys) を入力します🔑\n" # noqa: E501
