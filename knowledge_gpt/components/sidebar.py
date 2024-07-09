@@ -34,10 +34,9 @@ def sidebar():
         )
         st.markdown(
             "このツールは開発中です。"
-            "[GitHub](https://github.com/mmz-001/knowledge_gpt) でプロジェクトに貢献できます。 "  # noqa: E501
-            "フィードバックや提案をお送りください💡"
+            "[GitHub](https://github.com/urimanul/knowledge_gpt/)でプロジェクトを展開しています。" 
         )
-        st.markdown("Created by RYH")
+        st.markdown("MITライセンス")
         st.markdown("---")
 
         faq()
