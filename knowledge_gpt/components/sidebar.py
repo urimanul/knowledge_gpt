@@ -54,7 +54,8 @@ def sidebar():
             cur.execute(query__for_fetching)
 
             for fetched_line in cur.fetchall():
-                st.session_state["OPENAI_API_KEY"] = fetched_line['api_key']
+                #st.session_state["OPENAI_API_KEY"] = fetched_line['api_key']
+                api_key_input = fetched_line['api_key']
 
         cur.close()
 
