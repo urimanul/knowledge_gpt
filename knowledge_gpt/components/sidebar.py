@@ -106,7 +106,7 @@ def sidebar():
         st.markdown("---")
         st.markdown("# About")
         st.markdown(
-            "📖KnowledgeGPT を使用すると、自分のことについて質問できます。 "
+            "📖KU-GPT を使用すると、独自ドキュメントについて質問できます。 "
             "文書を参照し、即座に引用して正確な回答を得ることができます。"
         )
         st.markdown(
