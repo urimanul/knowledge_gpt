@@ -26,11 +26,7 @@ MODEL_LIST = ["gpt-3.5-turbo", "gpt-4"]
 # Uncomment to enable debug mode
 # MODEL_LIST.insert(0, "debug")
 
-st.set_page_config(page_title="KU-GPT", page_icon="📖", layout="wide", initial_sidebar_state="collapsed",menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
-        'About': "# This is a header. This is an *extremely* cool app!"
-    })
+st.set_page_config(page_title="KU-GPT", page_icon="📖", layout="wide", initial_sidebar_state="collapsed")
 st.header("📖 KU-GPT")
 
 # Enable caching for expensive functions
