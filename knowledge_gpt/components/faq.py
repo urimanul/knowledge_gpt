@@ -6,41 +6,37 @@ def faq():
     st.markdown(
         """
 # FAQ
-## How does KnowledgeGPT work?
-When you upload a document, it will be divided into smaller chunks 
-and stored in a special type of database called a vector index 
-that allows for semantic search and retrieval.
+## KnowledgeGPT はどのように機能しますか?
+ドキュメントをアップロードすると、ドキュメントは小さなチャンクに分割されます 
+ベクトルインデックスと呼ばれる特別なタイプのデータベースに保存されます 
+これにより、セマンティックな検索と取得が可能になります。
 
-When you ask a question, KnowledgeGPT will search through the
-document chunks and find the most relevant ones using the vector index.
-Then, it will use GPT3 to generate a final answer.
+質問すると、KnowledgeGPT が検索します。
+チャンクを文書化し、ベクトル インデックスを使用して最も関連性の高いチャンクを見つけます。
+次に、GPT3 を使用して最終的な回
 
-## Is my data safe?
-Yes, your data is safe. KnowledgeGPT does not store your documents or
-questions. All uploaded data is deleted after you close the browser tab.
+## 私のデータは安全ですか?
+はい、あなたのデータは安全です。 KnowledgeGPT はドキュメントを保存しません。
+質問。ブラウザのタブを閉じると、アップロードされたデータはすべて削除されます。
 
-## Why does it take so long to index my document?
-If you are using a free OpenAI API key, it will take a while to index
-your document. This is because the free API key has strict [rate limits](https://platform.openai.com/docs/guides/rate-limits/overview).
-To speed up the indexing process, you can use a paid API key.
+## ドキュメントのインデックス作成にこれほど時間がかかるのはなぜですか?
+無料の OpenAI API キーを使用している場合、インデックスに時間がかかります
+あなたの文書。これは、無料の API キーには厳しい [レート制限](https://platform.openai.com/docs/guides/rate-limits/overview) があるためです。
+インデックス作成プロセスを高速化するには、有料のAPIキーを使用できます。
 
-## What do the numbers mean under each source?
-For a PDF document, you will see a citation number like this: 3-12. 
-The first number is the page number and the second number is 
-the chunk number on that page. For DOCS and TXT documents, 
-the first number is set to 1 and the second number is the chunk number.
+## 各ソースの下の数字は何を意味しますか?
+PDF 文書の場合は、3-12 のような引用番号が表示されます。 
+最初の数字はページ番号で、2 番目の数字は 
+そのページのチャンク番号。 DOCS および TXT ドキュメントの場合、 
+最初の数値は 1 に設定され、2 番目の数値はチャンク番号です。
 
-## Are the answers 100% accurate?
-No, the answers are not 100% accurate. KnowledgeGPT uses GPT-3 to generate
-answers. GPT-3 is a powerful language model, but it sometimes makes mistakes 
-and is prone to hallucinations. Also, KnowledgeGPT uses semantic search
-to find the most relevant chunks and does not see the entire document,
-which means that it may not be able to find all the relevant information and
-may not be able to answer all questions (especially summary-type questions
-or questions that require a lot of context from the document).
-
-But for most use cases, KnowledgeGPT is very accurate and can answer
-most questions. Always check with the sources to make sure that the answers
-are correct.
+## 答えは 100% 正確ですか?
+いいえ、答えは 100% 正確ではありません。 KnowledgeGPT は GPT-3 を使用して生成します
+と答える。 GPT-3 は強力な言語モデルですが、時々間違いを犯します 
+そして幻覚症状が出やすい。また、KnowledgeGPT はセマンティック検索を使用します
+最も関連性の高いチャンクを見つけるためであり、ドキュメント全体は表示されません。
+つまり、すべての関連情報を見つけることができない可能性があります。
+すべての質問に回答できない場合があります（特に要約タイプの質問）
+または文書から多くのコンテキストを必要とする質問など）。
 """
     )
