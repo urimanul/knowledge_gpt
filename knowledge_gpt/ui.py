@@ -20,7 +20,7 @@ def wrap_doc_in_html(docs: List[Document]) -> str:
 
 def is_query_valid(query: str) -> bool:
     if not query:
-        st.error("Please enter a question!")
+        st.error("質問を入力してください。")
         return False
     return True
 
@@ -30,14 +30,14 @@ def is_file_valid(file: File) -> bool:
         len(file.docs) == 0
         or "".join([doc.page_content for doc in file.docs]).strip() == ""
     ):
-        st.error("Cannot read document! Make sure the document has selectable text")
-        logger.error("Cannot read document")
+        st.error("文書が読めません!文書に選択可能なテキストがあることを確認してください")
+        logger.error("文書が読めません!")
         return False
     return True
 
 
 def display_file_read_error(e: Exception, file_name: str) -> NoReturn:
-    st.error("Error reading file. Make sure the file is not corrupted or encrypted")
+    st.error("ファイルの読み取り中にエラーが発生しました。ファイルが破損していないか暗号化されていないことを確認してください")
     logger.error(f"{e.__class__.__name__}: {e}. Extension: {file_name.split('.')[-1]}")
     st.stop()
 
@@ -48,7 +48,7 @@ def is_open_ai_key_valid(openai_api_key, model: str) -> bool:
         return True
 
     if not openai_api_key:
-        st.error("Please enter your OpenAI API key in the sidebar!")
+        st.error("サイドバーに OpenAI API キーを入力してください。")
         return False
     try:
         openai.ChatCompletion.create(
