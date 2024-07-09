@@ -9,15 +9,6 @@ load_dotenv()
 
 def sidebar():
     with st.sidebar:
-        st.components.v1.html(
-        f"""
-        <script>
-        var elems = window.parent.document.querySelectorAll('div[class*="stTextInput"] p');
-        var elem = Array.from(elems).find(x => x.innerText == '{label}');
-        elem.style.fontSize = '20px'; // the fontsize you want to set it to
-        </script>
-        """
-        )
         st.markdown(
             "## 使用方法\n"
             "1. 以下に [OpenAI API キー](https://platform.openai.com/account/api-keys) を入力します🔑\n" # noqa: E501
