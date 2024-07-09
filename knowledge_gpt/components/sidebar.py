@@ -17,6 +17,11 @@ def sidebar():
             "2. PDF、docx、または txt ファイルをアップロードします📄\n"
             "3. ドキュメントについて質問してください💬\n"
         )
+
+        flgCheck_A = st.checkbox('登録キーから取得')
+        if flgCheck_A:
+            st.text('Checkbox A has checked')
+        
         api_key_input = st.text_input(
             "OpenAI API Key",
             type="password",
