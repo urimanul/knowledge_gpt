@@ -52,7 +52,7 @@ uploaded_file = st.file_uploader(
 
 model: str = st.selectbox("Model", options=MODEL_LIST)  # type: ignore
 
-with st.expander("Advanced Options"):
+with st.expander("オプション"):
     return_all_chunks = st.checkbox("ベクトル検索から取得したすべてのチャンクを表示")
     show_full_doc = st.checkbox("解析された文書の内容を表示する")
 
