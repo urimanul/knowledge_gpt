@@ -89,6 +89,7 @@ def sidebar():
                 cur.close()
             else:
                 st.write("認証情報が正しくありません。")
+                st.session_state["OPENAI_API_KEY"] = ""
         else:
             api_key_input = st.text_input(
                 "OpenAI API Key",
