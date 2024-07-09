@@ -19,7 +19,7 @@ def sidebar():
             "3. ドキュメントについて質問してください💬\n"
         )
 
-        flgCheck_A = st.checkbox('キー入力')
+        flgCheck_A = st.checkbox('登録キー参照')
         if flgCheck_A:
             # DBへ接続
             conn = mysql.connector.connect(
