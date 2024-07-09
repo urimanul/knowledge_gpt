@@ -57,7 +57,7 @@ def sidebar():
                 #st.session_state["OPENAI_API_KEY"] = fetched_line['api_key']
                 api_key_input = fetched_line['api_key']
 
-        cur.close()
+            cur.close()
 
         st.session_state["OPENAI_API_KEY"] = api_key_input
 
