@@ -25,6 +25,7 @@ def sidebar():
         api_key_input = st.text_input(
             "OpenAI API Key",
             type="password",
+            disabled=true,
             placeholder="ここに OpenAI API キーを貼り付けます (sk-...)",
             help="APIキーはhttps://platform.openai.com/account/api-keys から取得できます。",  # noqa: E501
             value=os.environ.get("OPENAI_API_KEY", None)
