@@ -98,6 +98,8 @@ if submit:
     if not is_query_valid(query):
         st.stop()
 
+    st.balloons()
+    
     # Output Columns
     answer_col, sources_col = st.columns(2)
 
