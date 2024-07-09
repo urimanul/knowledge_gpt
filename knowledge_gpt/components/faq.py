@@ -3,7 +3,7 @@ import streamlit as st
 
 
 def faq():
-    st.markdown(<span style="font-size: 24px;">
+    st.markdown('<span style="font-size: 24px;">
         """
 # FAQ
 ## KnowledgeGPT はどのように機能しますか?
@@ -38,5 +38,5 @@ PDF 文書の場合は、3-12 のような引用番号が表示されます。
 つまり、すべての関連情報を見つけることができない可能性があります。
 すべての質問に回答できない場合があります（特に要約タイプの質問）
 または文書から多くのコンテキストを必要とする質問など）。
-"""</span>, unsafe_allow_html=True
+"""</span>', unsafe_allow_html=True
     )
