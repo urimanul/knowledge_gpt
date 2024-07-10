@@ -76,9 +76,11 @@ def sidebar():
 
                 cur = conn.cursor(dictionary=True)  # 取得結果を辞書型で扱う設定
 
-                query__for_fetching = """
-                SELECT api_key FROM openai_payload;
-                """
+                #query__for_fetching = """
+                #SELECT api_key FROM openai_payload;
+                #"""
+
+                query__for_fetching = "select api_key from openai_payload where spoid ='"+SPOID+"'"
 
                 cur.execute(query__for_fetching)
 
