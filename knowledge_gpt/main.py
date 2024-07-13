@@ -47,7 +47,7 @@ if not openai_api_key:
 uploaded_file = st.file_uploader(
     "PDF、docx、または txt ファイルをアップロードする",
     type=["pdf", "docx", "txt"],
-    accept_multiple_files=True,
+    #accept_multiple_files=True,
     help="スキャンされたドキュメントはまだサポートされていません。",
 )
 
